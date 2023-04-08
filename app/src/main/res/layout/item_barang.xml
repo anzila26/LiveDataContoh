@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="barang"
+            type="anzila.binar.livedatacontoh.ListBarang" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgBarang"
+                android:src="@{barang.img}"
+                android:layout_width="60dp"
+                android:layout_height="55dp" />
+
+            <TextView
+                android:id="@+id/namaBarang"
+                android:text="@{barang.nama}"
+                android:layout_below="@id/imgBarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/hargaBarang"
+                android:text="@{barang.harga}"
+                android:layout_below="@id/namaBarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/sellerBarang"
+                android:text="@{barang.seller}"
+                android:layout_below="@id/hargaBarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
